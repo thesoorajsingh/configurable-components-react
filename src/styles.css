@@ -15,4 +15,12 @@
 
 .input {
   margin: 10px;
+  width: 50%;
+}
+
+.inputField {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 }

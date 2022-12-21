@@ -9,14 +9,19 @@ export default function App() {
         e.preventDefault();
         console.log(formData);
       },
+      defaultValues: {
+        Name: "Sooraj",
+        Email: "soorajsingh1999@gmail.com",
+      },
+      editable: false
     },
     formInputs: {
       Name: {
         type: "text",
         minLength: 2,
         maxLength: 50,
-        onClick: () => {
-          console.log("you clicked the name field");
+        onChange: (e) => {
+          console.log(e.target.value);
         },
       },
       Email: {
@@ -31,6 +36,11 @@ export default function App() {
           console.log(e.target.value);
         },
       },
+      Address: {
+      },
+      PAN: {
+        
+      }
     },
     formConfig: {
       editable: false,
@@ -38,8 +48,8 @@ export default function App() {
   };
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Configurable Form Component</h1>
+      <h2>Start editing the config object and see some magic happen!</h2>
       <EditableForm config={config} />
     </div>
   );
