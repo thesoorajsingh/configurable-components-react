@@ -7,8 +7,8 @@ export default function App() {
       formName: "personal",
       onSubmit: (e) => {
         e.preventDefault();
-        console.log(e.target);
-      }
+        console.log(formData);
+      },
     },
     formInputs: {
       Name: {
@@ -17,24 +17,24 @@ export default function App() {
         maxLength: 50,
         onClick: () => {
           console.log("you clicked the name field");
-        }
+        },
       },
       Email: {
         type: "email",
         onChange: (e) => {
           console.log(e.target.value);
-        }
+        },
       },
       Phone: {
         type: "number",
         onChange: (e) => {
           console.log(e.target.value);
-        }
-      }
+        },
+      },
     },
     formConfig: {
-      editable: false
-    }
+      editable: false,
+    },
   };
   return (
     <div className="App">
