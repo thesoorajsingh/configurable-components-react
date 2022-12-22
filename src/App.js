@@ -20,9 +20,6 @@ export default function App() {
         type: "text",
         minLength: 2,
         maxLength: 50,
-        onChange: (e) => {
-          console.log(e.target.value);
-        },
       },
       Email: {
         type: "email",
@@ -36,11 +33,6 @@ export default function App() {
           console.log(e.target.value);
         },
       },
-      Address: {
-      },
-      PAN: {
-        
-      }
     },
     formConfig: {
       editable: false,

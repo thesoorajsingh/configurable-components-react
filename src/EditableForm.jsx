@@ -7,6 +7,7 @@ const EditableForm = ({ config }) => {
     const [wasFormEdited, setWasFormEdited] = useState(false)
   
   const InputField = ({formMeta, formData, formInputs, item, index}) => {
+    console.log(formInputs[item])
     const [editable, setEditable] = useState(true)
     return <div className="inputField">
               <p>{item}</p>
@@ -16,8 +17,6 @@ const EditableForm = ({ config }) => {
                 disabled={editable}
                 onChange={(e) =>{
                   setFormData(...formData, `${item}: ${e.target.value}`);
-                  setWasFormEdited(true);
-                  console.log(wasFormEdited)
                 }}
                 {...formInputs[item]}
               />
