@@ -14,13 +14,15 @@
 }
 
 .input {
-  margin: 10px;
-  width: 50%;
+  margin: 10px auto;
+  /* margin: 10px; */
+  /* width: 50%; */
+  /* max-width: 200px; */
 }
 
 .inputField {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
